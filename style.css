@@ -4,11 +4,11 @@
 }
 body{
 	font-family: 'Quicksand', sans-serif;
-	overflow: hidden;
+	overflow-x: hidden;
 }
-main{
-	background-color: red;
-}
+/*main{
+	background-color :#424874;
+}*/
 
 /*navbar*/
 nav{
@@ -18,7 +18,9 @@ nav{
 	padding: 10px 0;
 	align-items: center;
 	overflow: hidden;
-	position: fixed-top;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 nav ul{
 	display: flex;
@@ -88,8 +90,7 @@ nav ul li a:hover{
 	opacity: 0;
 	transform: scale(0);
 }
-
-#home a img{
+.logo a img{
 	width: 50px;
 }
 
@@ -97,11 +98,10 @@ nav ul li a:hover{
 .banner-area{
 	width:100%;
 	height:100vh;
-	background-image: url(assets/jumbo.png);
+	background-image: url(aset/jumbo.png);
 	background-size:60%;
 	background-repeat: no-repeat;
 	background-position: right;
-
 }        
 
 .content-area{
@@ -112,28 +112,102 @@ nav ul li a:hover{
         
 .content{
 	text-align: left;
+	margin: 30px;
 	padding: 50px;
 }
 .content h1{
-	font-size:80px;
+	font-size:70px;
 	color:#a6b1e1;
 }
     
 .content p{
-	font-size:30px;
+	font-size:25px;
 	color:#a6b1e1
 }
-       
-.content .btn{
-	border:none;
-	outline:none;
-	padding:15px;
-	margin-top:100px;
-	border-radius: 4px;
-	color:#eee;
-	font-size: 18px;
-	cursor: pointer;    
-	background:#222;             
+.content a img{
+	padding: 10px 0;
+	width: 300px;
+	cursor: pointer;
+	padding-top: 300px;
+}
+
+/*main*/
+content {
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+}
+
+content article {
+	display: flex;
+    padding: 20px 50px;
+	background: #fff;
+	margin-top: 50px;
+	align-items: center;
+}
+.gambar img{
+	max-height: 400px;
+	border-radius: 10px;
+}
+article .text{
+	padding: 0 30px;
+	text-align: justify;
+}
+article .text h2{
+	text-align: center;
+}
+
+.text h2{
+	padding-bottom: 20px;
+}
+#produk{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 50vh;
+	justify-content: center;
+}
+#produk h2{
+	padding-bottom: 20px;
+}
+.produk{
+	display: flex;
+	flex-direction: row;
+}
+.produk img{
+	margin: 0 10px;
+	height: 150px;
+	width: 150px;
+	border-radius: 10px;
+}
+aside{
+	width: 90%;
+	margin: auto;
+	padding: 10px;
+}
+aside article {
+	display: flex;
+	flex-direction: column;
+    padding: 20px;
+	background: #fff;
+	margin-top: 50px;
+	align-items: center;
+	justify-content: center;
+}
+#kontak .text{
+		text-align: center;
+	}
+#kontak .profil img{
+	width: 300px;
+	border-radius: 50%;
+}
+#kontak .text p{
+	padding: 15px 0;
+}
+#kontak .text a img{
+	max-height: 20px;
+	max-width: 80px;
+	text-decoration: none;
 }
 
 /*responsive breakpoint*/
@@ -141,12 +215,12 @@ nav ul li a:hover{
 /*ukuran tablet*/
 @media screen and (max-width: 768px){
 	nav ul{
-		width: 50%
+		width: 50%;
 	}
 	.banner-area{
 		background-size: 100%;
+		height:80vh;
 		background-repeat: no-repeat;
-		height: 80vh;
 		background-position: bottom;
 	}  
 	.content-area{
@@ -157,13 +231,33 @@ nav ul li a:hover{
 		text-align: center;
 	}
 	.content h1{
-		font-size:70px;
+		font-size:60px;
 		color:#a6b1e1;
 	}
 	    
 	.content p{
-		font-size:25px;
+		font-size:20px;
 		color:#a6b1e1
+	}
+	.content a img{
+		padding: 10px 0;
+		width: 200px;
+		cursor: pointer;
+	}
+	content article {
+		flex-direction: column;
+	}
+	.gambar img{
+		max-height: 300px;
+	}
+	#produk{
+		height: auto;
+	}
+	.produk{
+		flex-direction: column;
+	}
+	.produk img{
+		margin: 10px 0;
 	}
 
 }
@@ -196,9 +290,9 @@ nav ul li a:hover{
 	.banner-area{
 		background-size: 100%;
 		background-repeat: no-repeat;
-		height: 70vh;
+		height: 60vh;
 		background-position: bottom;
-	}  
+	}
 	.content h1{
 		font-size:50px;
 		color:#a6b1e1;
@@ -208,5 +302,44 @@ nav ul li a:hover{
 		font-size:15px;
 		color:#a6b1e1
 	}
+	.content a img{
+		padding: 10px 0;
+		width: 50%;
+	}
+	.text h2{
+		font-size: 20px;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.gambar img{
+		max-height: 200px;
+	}
+	#produk{
+		height: auto;
+	}
+	.produk{
+		flex-direction: column;
+	}
+	.produk img{
+		margin: 10px 0;
+	}
+	aside article {
+		flex-direction: column;
+	}
+	#kontak .text{
+		text-align: center;
+	}
+	#kontak .profil img{
+		width: 150px;
+		padding-bottom: 10px;
+	}
 
+}
+/*footer*/
+footer{
+	padding: 20px;
+	color: white;
+	background-color: #424874;
+	text-align: center;
+	font-weight: bold;
 }
